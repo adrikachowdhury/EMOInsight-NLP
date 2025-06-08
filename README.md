@@ -1,7 +1,7 @@
 # 😊😔😠 Emotion Detection
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project crafts an emotion classification system by blending a Transformer (DistilBERT), a Bidirectional LSTM (BiLSTM), and a Multi-Layer Perceptron (MLP) on the SemEval-2019 Task 3 (EmoContext) dataset, targeting emotions (Happy, Sad, Angry, Others) in three-turn dialogues. The approach yields a performance that outstrips the original study's baseline and top result, underscoring the strength of this hybrid method. Micro-averaged F1 was chosen as the evaluation metric, aggregating true positives, false positives, and false negatives across all classes to weight each sample equally, making it ideal for the dataset's imbalance, where larger classes like "Others" dominate, ensuring a balanced overall performance assessment.
+This step-by-step project crafts an emotion classification system by blending a Transformer (DistilBERT), a Bidirectional LSTM (BiLSTM), and a Multi-Layer Perceptron (MLP) on the SemEval-2019 Task 3 (EmoContext) dataset, targeting emotions (Happy, Sad, Angry, Others) in three-turn dialogues. The approach yields a performance that outstrips the original study's baseline and top result, underscoring the strength of this hybrid method. Micro-averaged F1 was chosen as the evaluation metric for fair comparison to weight each sample equally, making it ideal for the dataset's imbalance, where larger classes like "Others" dominate, ensuring a balanced overall performance assessment.
 
 ---
 
@@ -11,7 +11,7 @@ The pipeline processes text data through the following stages:
 2. **Model**: Hybrid model consisting of Transformer, Sequential Learning, and classification through MLP.
 5. **Evaluation:** Computes micro-averaged metrics and provides interpretability via LIME.
 
-The project uses SMOTE to handle class imbalance and includes logging to track progress.
+The project uses Synthetic Minority Oversampling Technique (SMOTE) to handle class imbalance and includes logging to track progress.
 
 ## 📊 Dataset
 - **SemEval-2019 Task 3 (Cleansed version)** [A. Chatterjee et al., 2019 – ACL Anthology](https://aclanthology.org/S19-2005.pdf)
