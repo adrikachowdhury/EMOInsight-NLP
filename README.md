@@ -1,4 +1,4 @@
-# 😊😔😠 Emotion Classification
+# 😊😔😠 Emotion Detection
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project crafts an emotion classification system by blending a Transformer (DistilBERT), a Bidirectional LSTM (BiLSTM), and a Multi-Layer Perceptron (MLP) on the SemEval-2019 Task 3 (EmoContext) dataset, targeting emotions (Happy, Sad, Angry, Others) in three-turn dialogues. The approach yields a performance that outstrips the original study's baseline and top result, underscoring the strength of this hybrid method. Micro-averaged F1 was chosen as the evaluation metric, aggregating true positives, false positives, and false negatives across all classes to weight each sample equally, making it ideal for the dataset's imbalance, where larger classes like "Others" dominate, ensuring a balanced overall performance assessment.
