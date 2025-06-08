@@ -15,6 +15,7 @@ The project uses SMOTE to handle class imbalance and includes logging to track p
 
 ## 📊 Dataset
 - **SemEval-2019 Task 3 (Cleansed version)** [A. Chatterjee et al., 2019 – ACL Anthology](https://aclanthology.org/S19-2005.pdf)
+- Source: [HuggingFace Dataset](https://huggingface.co/datasets/oneonlee/cleansed_emocontext)
 
 ## 🧠 Model Architecture
 1. **Transformer (DistilBERT):** Extracts contextual features from preprocessed text.
