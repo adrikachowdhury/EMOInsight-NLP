@@ -1,24 +1,24 @@
 # 😊😔😠 Emotion Detection
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This step-by-step project crafts an emotion classification system by blending a Transformer (DistilBERT), a Bidirectional LSTM (BiLSTM), and a Multi-Layer Perceptron (MLP) on the SemEval-2019 Task 3 (EmoContext) dataset, targeting emotions (Happy, Sad, Angry, Others) in three-turn dialogues. The approach yields a performance that outstrips the original study's baseline and top result, underscoring the strength of this hybrid method. Micro-averaged F1 was chosen as the evaluation metric for fair comparison to weight each sample equally, making it ideal for the dataset's imbalance, where larger classes like "Others" dominate, ensuring a balanced overall performance assessment.
+This step-by-step project crafts an emotion classification system by exploring two modified BERT Transformer model variants—`DistilBERT` and `ALBERT`—integrated with a Bidirectional LSTM (BiLSTM) and a Multi-Layer Perceptron (MLP) on the SemEval-2019 Task 3 (EmoContext) dataset, targeting emotions (Happy, Sad, Angry, Others) in three-turn dialogues. DistilBERT and ALBERT are used to compare their efficient architectures—DistilBERT with distillation and ALBERT with parameter sharing—for better emotion classification in dialogues. For experimentation purposes, both models were used to compare performance among them, and both outperformed the baseline study, with ALBERT found to perform comparatively well among the two. Micro-averaged F1 was chosen as the evaluation metric for fair comparison, ideal for the dataset's imbalance, where larger classes like "Others" dominate, ensuring a balanced overall performance assessment by weighing each sample equally. Additionally, explainable AI, LIME (Local Interpretable Model-agnostic Explanations), is used to provide interpretable insights into the model's emotion predictions by highlighting influential text features.
 
 ---
 
 ## 🚀 Features
 The pipeline processes text data through the following stages:
 1. **Preprocessing:** Cleans and normalizes text, preserving `[SEP]` separators for multi-turn context.
-2. **Model**: Hybrid model consisting of Transformer, Sequential Learning, and classification through MLP.
-5. **Evaluation:** Computes micro-averaged metrics and provides interpretability via LIME.
-
-The project uses Synthetic Minority Oversampling Technique (SMOTE) to handle class imbalance and includes logging to track progress.
+2. **Oversampling Strategy:** Synthetic Minority Oversampling Technique (SMOTE) was used to handle class imbalance and includes logging to track progress.
+3. **Model**: Hybrid model consisting of Transformer, Sequential Learning, and classification through MLP.
+4. **Evaluation:** Computes micro-averaged metrics with final evaluation through test set.
+5. **Explainable AI (XAI):** Explains model predictions by highlighting key text features.
 
 ## 📊 Dataset
 - **SemEval-2019 Task 3 (Cleansed version)** [A. Chatterjee et al., 2019 – ACL Anthology](https://aclanthology.org/S19-2005.pdf)
 - Source: [HuggingFace Dataset](https://huggingface.co/datasets/oneonlee/cleansed_emocontext)
 
 ## 🧠 Model Architecture
-1. **Transformer (DistilBERT):** Extracts contextual features from preprocessed text.
+1. **Transformer:** Extracts contextual features from preprocessed text [DistilBERT: `distilbert-base-uncased`; ALBERT: `albert-base-v2`].
 2. **BiLSTM:** Processes sequential features from DistilBERT.
 3. **MLP:** Classifies emotions based on BiLSTM outputs.
 
