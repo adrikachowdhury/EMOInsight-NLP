@@ -41,5 +41,5 @@ The pipeline processes text data through the following stages:
 
 ## ⚙️ Setup
 1. Download/clone the repository from GitHub.
-2. Install dependencies available on `requirements.txt`
+2. Install dependencies
 3. Open `EmoDetect.ipynb` in a notebook (Google Colab/Jupyter) and run all cells to train and evaluate the model through hyperparameter tuning.
