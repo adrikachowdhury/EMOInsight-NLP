@@ -30,7 +30,7 @@ The pipeline processes text data through the following stages:
 - _NLTK:_ Supports text preprocessing with stopwords, stemming, and lemmatization.
 - _unidecode:_ Converts accented characters to ASCII for normalization.
 - _emoji:_ Converts emojis to text representations (e.g., :smile:).
-- _emoticon_fix:_ Corrects and standardizes emoticons in text.
+- _emoticon_fix:_ Corrects and standardizes emoticons in text (e.g., :-D).
 - _lime:_ Enables LIME explainability to interpret model predictions.
 - _joblib:_ Efficiently saves and loads scikit-learn models and scalers.
 - _imbalanced-learn:_ Provides SMOTE for handling class imbalance in the training data.
